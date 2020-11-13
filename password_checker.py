@@ -32,5 +32,6 @@ def check_password():
     for y in range(1,len(passwords)):
         password_convert_check(passwords[y])
 
-check_password()
+if __name__ == "__main__":
+    check_password()
 
