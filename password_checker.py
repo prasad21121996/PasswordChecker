@@ -26,11 +26,15 @@ def check_count(res,tail_pass):
     return 0    
     
 def check_password():
-    passwords =[]
-    for x in sys.argv:
-        passwords.append(x)
-    for y in range(1,len(passwords)):
-        password_convert_check(passwords[y])
+    while True:
+        print(''' 1.Check Password \n 2.Exit \n Enter your option:''', end='')
+        op = input()
+        if int(op) == 2:
+            break
+        print('Enter password : ', end='')
+        password = input()
+        password_convert_check(password)
+    print('Thanks')
 
 if __name__ == "__main__":
     check_password()
